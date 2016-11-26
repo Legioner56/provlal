@@ -1,0 +1,42 @@
+/* для мониторов шире 700 пикселей */
+@media screen and (min-width: 700px){
+
+
+
+	.content{
+		border: 1px solid black;
+		margin: auto;
+		padding: 0px 20px;
+	}
+	.content__item {
+		border: 1px dotted black;
+		display: inline-block;
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+}
+/* для мониторов шире 700 пикселей */
+
+
+@media screen and (max-width: 699px){
+
+
+
+	.content{
+		border: 3px solid black;
+		margin: auto;
+		width: 90%;
+		padding: 0px 10px;
+	}
+	.content__item {
+		border: 1px solid red;
+		background-color: blue;
+	}
+
+
+
+}
