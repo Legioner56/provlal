@@ -1,42 +1,97 @@
 /* для мониторов шире 700 пикселей */
-@media screen and (min-width: 700px){
+@media screen and (min-width: 1000px){
 
-
-
-	.content{
-		border: 1px solid black;
-		margin: auto;
-		padding: 0px 20px;
+	.header__content{
+		width: 80%;
+		height: 100%;
+		background-color: #5c5766;
+		margin: 0 auto;
+		position: relative;
 	}
-	.content__item {
-		border: 1px dotted black;
+	.header__menu{
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+		width: 60%;
+		position: absolute;
+		top: 6%;
+		left: 20%;
+		text-align: justify;
+	}
+	.header__menu li{
 		display: inline-block;
-		width: 40%;
-		margin-left: auto;
-		margin-right: auto;
 	}
-
-
+	.header__menu_last{
+		width: 100%;
+		display: inline-block;
+	}
+	.header__menu a{
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+		font-family:"Georgia", sans-serif;
+		font-size: 14px;
+	}
+	.header__logo{
+		height: 100px;
+		width: 100px;
+		background-color: white;
+		position: absolute;
+		top: 22%;
+		left: 50%;
+		margin-left: -50px;
+	}
+	.header__info{
+		font-family:"Georgia", sans-serif;
+		position: absolute;
+		bottom: 0px;
+		height: 59%;
+		width: 100%;
+	}
+	.header__info_h2{
+		font-size: 26px;
+		font-family: "Georgia", sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		padding: 0px;
+		margin: 0;
+	}
+	.header__info_h1{
+		font-family: "Georgia", sans-serif;
+		font-size: 50px;
+		color: white;
+		text-align: center;
+		padding: 0px;
+		margin: 0px;
+		padding-top: 2%; 
+	}
+	.header__info_h1 span {
+		font-weight: bold;
+	}
+	.header__info_h3{
+		color: #c4c0cf;
+		font-size: 20px;
+		text-align: center;
+	}
 
 }
-/* для мониторов шире 700 пикселей */
-
-
-@media screen and (max-width: 699px){
 
 
 
-	.content{
-		border: 3px solid black;
-		margin: auto;
-		width: 90%;
-		padding: 0px 10px;
+/* Высота хедера в зависимости от высоты экрана */
+@media screen and (max-height: 1000px){
+	.header{
+		width: 100%;
+		height: 100vh;
+		background-color: #5c5766;
 	}
-	.content__item {
-		border: 1px solid red;
-		background-color: blue;
-	}
-
-
-
 }
+@media screen and (min-height: 1001px){
+	.header{
+		width: 100%;
+		height: 1000px;
+		background-color: #5c5766;
+	}
+}
+/* Высота хедера в зависимости от высоты экрана */
