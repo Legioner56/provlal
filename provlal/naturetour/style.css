@@ -1,0 +1,638 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #ebe5d5;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Header*/
+
+.header {
+	width: 100%;
+}
+.header__content{
+	width: 990px;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.header__logo-and-info{
+	width: 100%;
+}
+.header__logo{
+	min-height: 65px;
+	width: 236px;
+	background-image: url('http://www.NatureTour.provlal.ru/img/logo.png');
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+.header__contact-info{
+	position: absolute;
+	right: 0;
+}
+.header__contact-info p:first-child{
+	font-size: 12px;
+	color: #585755;
+	text-align: right;
+}
+.header__contact-info p:nth-child(2){
+	font-size: 20px;
+	text-align: right;
+}
+.header__contact-info p{
+	padding: 0;
+	margin: 0;
+}
+.header__top-menu{
+	list-style: none;
+	padding: 10px 0;
+	margin: 0;
+	display: inline-block;
+	font-size: 13px;
+}
+.header__top-menu li{
+	display: inline-block;
+	padding-right: 20px;
+}
+.header__top-menu li:last-child{
+	padding-right: 0px;
+}
+.header__top-menu a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #209a28;
+}
+.header__menu{
+	list-style: none;
+	display: inline-block;
+	background-image: linear-gradient(#66c13e, #0c932f);
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: -1px -1px 0 0 #0c932f, inset 1px 1px 0 0 #81de41;
+	margin: 110px auto 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.header__menu li{
+	margin: 0 auto;
+	display: inline-block;
+	margin-left: -5.5px;
+}
+.header__menu li:first-child {
+	margin-left: 0px;
+}
+.header__menu li a{
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0px -1.5px 0 #1c7c1f;
+	line-height: 40px;
+	vertical-align: middle;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 11px;
+	margin: 0px;
+}
+.header__menu li a:hover{
+	background-color: #64d643; 
+	box-shadow: inset 0 -3px 0 0 #1d7000;
+}
+.header__active {
+	background-color: #64d643; 
+	box-shadow: inset 0 -3px 0 0 #1d7000;
+}
+
+/*Header*/
+
+/*Primary*/
+
+.primary__content{
+	width: 990px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #ffffff;
+	margin-top: 35px;
+	border-radius: 10px;
+}
+.clearfix{
+	clear: both;
+	width: 100%;
+}
+.primary__col-left{
+	float: left;
+	width: 710px;
+	padding: 20px 15px;
+	
+}
+.primary__col-right{
+	float: left;
+	width: 248px;
+	border-left: 1px solid #e8e3da;
+}
+
+
+/* слайдер*/
+
+.primary__slider-wrapper{
+	width: 700px;
+	height: 265px;
+	margin: 0 auto;
+	border-radius: 10px;
+	position: relative;
+}
+.primary__slider{
+	overflow: hidden;
+}
+.primary__slider-slides{
+	width: 400%;
+}
+.primary__slider-slides img{
+	width: 700px;
+	height: 265px;
+	float: left;
+	border-radius: 10px;
+}
+
+/*положение переключателей*/
+.primary__slider-control{
+	position: absolute;
+	z-index: 5;
+	left: 485px;
+	bottom: 30px;
+}
+/* положение переключателей*/
+
+/*внешний вид не активных переключателей*/
+.primary__slider-control label{
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #6b685e;
+	box-shadow: inset 1px -1px 0 0 #aaa493;
+	color: #cbcbcb;
+	text-align: center;
+	line-height: 22px;
+	vertical-align: middle;
+	font-size: 12px;
+	font-weight: 800;
+}
+/*внешний вид не активных переключателей*/
+
+/*скрытие стандартных радио кнопок*/
+.primary__slider-wrapper input[type=radio]{
+	display: none;
+}
+/*скрытие стандартных радио кнопок*/
+
+/*настройка оформления конкретного переключателя в активном состоянии*/
+#btn-1:checked ~ .primary__slider-control label[for="btn-1"],
+#btn-2:checked ~ .primary__slider-control label[for="btn-2"],
+#btn-3:checked ~ .primary__slider-control label[for="btn-3"],
+#btn-4:checked ~ .primary__slider-control label[for="btn-4"] {
+	background-image: linear-gradient(#6ddd49, #1a7912);
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	box-shadow: none;
+	color: #f6fbf6;
+}
+/*настройка оформления конкретного переключателя в активном состоянии*/
+
+/*смещение каждого изображения, для переключения*/
+#btn-1:checked ~ .primary__slider .primary__slider-slides {
+	transform: translate(0);
+}
+#btn-2:checked ~ .primary__slider .primary__slider-slides {
+	transform: translate(-700px);
+}
+#btn-3:checked ~ .primary__slider .primary__slider-slides {
+	transform: translate(-1400px);
+}
+#btn-4:checked ~ .primary__slider .primary__slider-slides {
+	transform: translate(-2100px);
+}
+/*смещение каждого изображения, для переключения*/
+
+
+.primary__text-slider{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 235px;
+	height: 265px;
+	background-color: rgba(42, 35, 27, 0.9);
+	border-radius: 0 10px 10px 0;
+	overflow: hidden;
+}
+.primary__text-slider_list{
+	width: 400%;
+}
+.primary__text-slider_list div{
+	width: 210px;
+	height: 245px;
+	float: left;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-right: 10px;
+}
+.primary__text-slider-h2{
+	color: white;
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+}
+.primary__text-slider-h1{
+	color: #28b028;
+	font-size: 32px;
+	line-height: 35px;
+	margin: 0;
+	padding: 0;
+}
+.primary__text-slider-h3{
+	color: white;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+#btn-1:checked ~ .primary__text-slider .primary__text-slider_list {
+	transform: translate(0);
+}
+#btn-2:checked ~ .primary__text-slider .primary__text-slider_list {
+	transform: translate(-235px);
+}
+#btn-3:checked ~ .primary__text-slider .primary__text-slider_list {
+	transform: translate(-470px);
+}
+#btn-4:checked ~ .primary__text-slider .primary__text-slider_list {
+	transform: translate(-705px);
+}
+
+/* слайдер*/
+
+/*вставочка между слайдерами*/
+.primary__info-for-slider{
+	width: 700px;
+	height: 120px;
+	position: relative;
+}
+.primary__info-header{
+	font-size: 26px;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	color: #444137;
+	text-transform: uppercase;
+}
+.primary__info-content{
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	color: #595447;
+	width: 460px;
+	line-height: 16px;
+	padding-top: 5px;
+}
+.primary__info-content a{
+	color: #28b028;
+	font-weight: 700;
+}
+.primary__float-logo{
+	position: absolute;
+	width: 187px;
+	height: 133px;
+	font-size: 0px;
+	background: url('http://www.NatureTour.provlal.ru/img/logo-for-info.png');
+	right: 40px;
+	bottom: 0;
+}
+
+/*Primary*/
+
+/* right */
+
+.primary__block1-form{
+	width: 200px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e1dbce;
+}
+.form1{
+	width: 200px;
+	height: 24px;
+	border: 1px solid #cfcdc5;
+	margin-top: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: 0 0 0 3px #e8e5de;
+	border-radius: 5px;
+	cursor: pointer;
+	background: url('http://www.naturetour.provlal.ru/img/btn.png') 
+	no-repeat 99% 50%;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 10px;
+}
+.form1:focus{
+	background: url('http://www.naturetour.provlal.ru/img/btn-not.png') 
+	no-repeat 99% 50%;
+	color: #231f20;
+}
+.block-form_h1{
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	padding-top: 20px;
+	color: #3f3b30;
+	text-transform: uppercase;
+}
+.block-form_h2{
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	padding-top: 5px;
+	color: #3f3b30;
+}
+.btn_green{
+	font-family: 'Montserrat', sans-serif;
+	background-image: linear-gradient(#66c23d, #0e9421);
+	border: none;
+	box-shadow: -0.5px 0 0 1px #1a9739, 0 0 0 3.5px #d8d5cc, inset 1px 1px 0 0 #7ddb40;
+	border-radius: 5px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 #1f7e20;
+	text-transform: uppercase;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.search-holidays{
+	font-size: 15px;
+	line-height: 34px;
+	height: 34px;
+	width: 100%;
+	margin-top: 20px;
+	padding-left: 0px;
+	cursor: pointer;
+		
+}
+.search-holidays::after{
+	content: "";
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	background: url('http://www.naturetour.provlal.ru/img/arrow.png')
+	no-repeat 25% 50%;
+}
+.form1_2{
+	width: 100px;
+	height: 24px;
+	border: 1px solid #cfcdc5;
+	margin-top: 15px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: 0 0 0 3px #e8e5de;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 10px;
+	float: left;
+}
+.form1_3:focus,
+.form1_4:focus,
+.form1_2:focus{
+	color: #231f20;
+}
+.search-hol{
+	font-size: 14px;
+	height: 28px;
+	float: left;
+	width: 67px;
+	padding: 0;
+	margin-top: 15px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.primary__right-block2{
+	width: 200px;
+	margin: 20px auto;
+}
+.form1_3{
+	width: 105px;
+	height: 24px;
+	border: 1px solid #cfcdc5;
+	margin-top: 15px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: 0 0 0 3px #e8e5de;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 10px;
+	float: left;
+}
+.form1_4{
+	width: 195px;
+	height: 24px;
+	border: 1px solid #cfcdc5;
+	margin-top: 15px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: 0 0 0 3px #e8e5de;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 11px;
+	color: #999999;
+	padding-left: 10px;
+	float: left;
+}
+.primary__right-block3{
+	width: 200px;
+	margin: 20px auto;
+	border-top: 1px solid #e1dbce;
+}
+.block-form_h2.spm{
+	font-weight: 700;
+	padding-bottom: 0px;
+	margin-bottom: -15px;
+}
+.primary__right-block3_2{
+	padding-top: 20px;
+}
+.primary__right-block3_1{
+	padding-top: 10px;
+}
+
+/*Primary*/
+
+/*Footer*/
+
+.footer__content{
+	width: 990px;
+	margin: 0 auto;	
+}
+.footer__head{
+	width: 100%;
+	height: 41px;
+	background-image: linear-gradient(#999387, #6e675e);
+	border-bottom: 1px solid #635543;
+	margin-top: 20px;
+	border-radius: 5px 5px 0 0;
+}
+.footer__head p{
+	line-height: 40px;
+	vertical-align: center;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Arial", sans-serif;
+	font-style: italic;
+}
+.footer__content{
+	width: 990px;
+	height: 180px;
+	background-color: #f4f2ec;
+	margin-bottom: 20px;
+	border-radius: 0 0 5px 5px;
+}
+.footer__col1{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 230px;
+}
+.footer__col2{
+	float: left;
+	width: 540px;
+	margin: 0;
+	padding: 0;
+}
+.footer__col3{
+	float: left;
+	width: 220px;
+	margin: 0;
+	padding: 0;
+}
+.footer__col1-into{
+	width: 200px;
+	margin: 20px auto;
+	position: relative;
+}
+.footer__col1-into::before{
+	width: 34px;
+	height: 28px;
+	position: absolute;
+	content: "";
+	background: url('http://www.naturetour.provlal.ru/img/twitter.png')
+	50% 50% no-repeat;
+	top: -5px;
+	right: -10px;
+}
+.footer__col1-into::after{
+	height: 135px;
+	width: 5px;
+	border-right: 1px solid #d8d6ce;
+	content: "1";
+	font-size: 0;
+	position: absolute;
+	right: -20px;
+	top: 0px;
+}
+.footer__h1{
+	text-align: left;
+	text-transform: uppercase;
+	color: #64522a;
+	font-size: 14px;
+	font-weight: 700;
+	padding-left: 10px;
+}
+.footer__col1-into .footer__text{
+	text-align: justify;
+	color: #757268;
+	padding: 0 10px;
+	font-size: 12px;
+}
+.footer__col1-into a{
+	position: absolute;
+	top: 115px;
+}
+.footer__col2-into:first-child{
+	width: 190px;
+	margin: 20px auto;
+	float: left;
+}
+.footer__col2-into{
+	margin: 20px auto;
+	float: left;
+}
+.footer__col2-into .footer__h1{
+	padding: 0 30px;
+	margin: 0;
+}
+.footer__col2-into .footer__text{
+	color: #757268;
+	padding: 0 0 0 30px;
+	text-align: left;
+	font-size: 12px;
+}
+.footer__text_1{
+	padding-top: 16.8px;
+	color: #757268;
+	padding-left: 0px;
+	padding-right: 35px;
+	font-size: 12px;
+	position: relative;
+}
+.footer__col2-into:last-of-type .footer__text_1:last-of-type::after{
+	height: 135px;
+	width: 5px;
+	border-right: 1px solid #d8d6ce;
+	content: "";
+	font-size: 0;
+	position: absolute;
+	right: -20px;
+	top: 0px;
+}
+.footer__h1{
+	font-size: 14px;
+}
+.footer__col3-into{
+	width: 210px;
+	margin: 20px auto;
+	position: relative;
+}
+.footer__col3-into .footer__text{
+	font-size: 12px;
+	color: #757268;
+}
+.footer__col3-into .footer__h1{
+	margin: 0;
+	padding: 0;
+}
+.footer__col3-into .footer__text span{
+	font-weight: 700;
+}
+.copyright{
+	margin: 60px auto 25px auto;
+	font-size: 11px;
+	color: #716c61;
+	text-align: center;
+}
+.copyright span{
+	color: #3a3731;
+	font-weight: 700;
+}
